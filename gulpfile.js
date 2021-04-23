@@ -102,7 +102,8 @@ gulp.task( 'minifycss', function() {
 		)
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( gulp.dest( paths.css ) );
+		.pipe( gulp.dest( paths.css ) )
+    .pipe(browserSync.reload({ stream: true }));
 } );
 
 /**
@@ -198,7 +199,8 @@ gulp.task( 'scripts', function() {
 		.src( scripts, { allowEmpty: true } )
 		.pipe( babel() )
 		.pipe( concat( 'theme.js' ) )
-		.pipe( gulp.dest( paths.js ) );
+		.pipe( gulp.dest( paths.js ) )
+    .pipe(browserSync.reload({ stream: true }));
 } );
 
 // Deleting any file inside the /src folder
