@@ -10,6 +10,7 @@
 
 ## Version History
 
+- 2.0.0 - Update gulp to latest build process.
 - 1.1.0 - Resolved error with euqueue process of included (blank) JS file. 
 - 1.0.0 - Initial commit.
 
