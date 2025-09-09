@@ -8,6 +8,13 @@
 
 ![divider](https://cdn.infonet.research.asu.edu/assets/divider.png)
 
+## Version History
+
+- 1.1.0 - Resolved error with euqueue process of included (blank) JS file. 
+- 1.0.0 - Initial commit.
+
+<hr style="margin:50px 0;"> 
+
 ## Developing With NPM, Gulp, SASS and Browser Sync
 
 ### Installing Dependencies
