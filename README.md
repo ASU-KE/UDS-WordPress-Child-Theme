@@ -4,13 +4,15 @@
 
 <h1 align="center">Unity Design System - WordPress Child Theme Template</h1>
 
-<p align="center">A child theme for <a href="https://github.com/asu-ke-web-services/UDS-WordPress-Theme">UDS-WordPress</a></p>
+<p align="center">A child theme for <a href="https://github.com/ASU-KE/UDS-WordPress-Theme">UDS-WordPress</a></p>
 
 ![divider](https://cdn.infonet.research.asu.edu/assets/divider.png)
 
 ## Version History
 
-- 2.0.0 - Update gulp to latest build process.
+- 2.0.0 
+  - Update gulp to latest build process.
+  - Update resources to latest
 - 1.1.0 - Resolved error with euqueue process of included (blank) JS file. 
 - 1.0.0 - Initial commit.
 
@@ -28,16 +30,5 @@ To work and compile your Sass files on the fly start:
 
 - `$ gulp watch`
 
-Or, to run with Browser-Sync:
-
-- First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
-```javascript
-  "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
-    "notify": false
-  }
-};
-```
-- then run: `$ gulp watch-bs`
-
-[1] Visit [https://browsersync.io/](https://browsersync.io/) for more information on Browser Sync
+- This theme's compiled CSS runs as a dependancy to the parent theme's compiled CSS. 
+- The SASS source files for this child theme come configured to consume the UDS Bootstrap 4 variables from the parent.
