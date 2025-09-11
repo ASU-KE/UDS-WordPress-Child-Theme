@@ -45,67 +45,14 @@ gulp.task("minify-css", function () {
  */
 gulp.task("front-end-scripts", function() {
 	const scripts = [
-		"./src/js/fontawesome/fontawesome.js",
-		"./src/js/fontawesome/brands.js",
-		"./src/js/fontawesome/solid.js",
-		"./src/js/custom/skip-link-focus-fix.js",
-		"./src/js/custom/init-uds-header.js",
-		"./src/js/custom/hero_video.js",
-		"./src/js/custom/modals.js",
-		"./src/js/custom/side-menu-active-child.js",
+		"./src/js/child-theme.js",
 	]
 
 	// Create uglifified min.js
-	gulp
+	return gulp
 		.src(scripts, { allowEmpty: true })
 		.pipe(babel({ presets: ["@babel/preset-env"] }))
 		.pipe(concat("theme.min.js"))
 		.pipe(uglify())
 		.pipe(gulp.dest("./dist/js"));
-
-	// Create full-sized version
-	return gulp
-		.src(scripts, { allowEmpty: true })
-		.pipe(babel())
-		.pipe(concat("theme.js"))
-		.pipe(gulp.dest("./src/js"))
-});
-
-
-/**
- * Admin JS compilation. This creates a minified 'admin-bundle.js' that is enqueued in the WordPress admin area.
- */
-gulp.task("admin-scripts", function() {
-	const adminScripts = [
-		"./src/js/custom/admin/admin.js",
-		"./src/js/fontawesome/fontawesome.js",
-		"./src/js/fontawesome/brands.js",
-		"./src/js/fontawesome/solid.js",
-		"./src/js/custom/hero_video.js",
-		"./src/js/custom/modals.js",
-		"./src/js/custom/side-menu-active-child.js",
-	]
-
-	return gulp
-		.src(adminScripts, { allowEmpty: true })
-		.pipe(babel({ presets: ["@babel/preset-env"] }))
-		.pipe(concat("admin-bundle.js"))
-		.pipe(gulp.dest("./dist/js"));
-
-});
-
-gulp.task("admin-core-scripts", function() {
-	const adminScripts = [
-		"./src/js/custom/admin/core-list-block.js",
-		"./src/js/custom/admin/core-divider.js",
-		"./src/js/custom/admin/core-image-block.js",
-		"./src/js/custom/admin/heading-highlights.js",
-	]
-
-	return gulp
-		.src(adminScripts, { allowEmpty: true })
-		.pipe(babel({ presets: ["@babel/preset-env"] }))
-		.pipe(concat("admin-core-bundle.js"))
-		.pipe(gulp.dest("./dist/js"));
-
-});
+	});
