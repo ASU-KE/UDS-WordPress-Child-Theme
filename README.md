@@ -13,6 +13,8 @@
 - 2.0.0 
   - Update gulp to latest build process.
   - Update resources to latest
+  - src and dist folders. update enqueue 
+  - remove features that belong in custom plugins
 - 1.1.0 - Resolved error with euqueue process of included (blank) JS file. 
 - 1.0.0 - Initial commit.
 
