@@ -14,31 +14,14 @@ const sass = gulpSass(dartSass);
 /**
  * Compile SCSS to CSS
  */
-gulp.task("compile-sass", function () {
-	return gulp.src( './src/sass/*.scss', { sourcemaps: true } )
+gulp.task("compile-minify-sass", function () {
+	return gulp.src( './src/sass/child-theme.scss', { sourcemaps: true } )
 	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefixer())
-	.pipe(gulp.dest('./src/css/compiled-sass', { sourcemaps: '.' }));
+	.pipe(cleanCSS())
+	.pipe(rename({ suffix: ".min" }))
+	.pipe(gulp.dest('./dist/css', { sourcemaps: '.' }));
 });
-
-/**
- * Minify css
- */
-gulp.task("minify-css", function () {
-	return gulp
-		.src([
-			"./src/css/compiled-sass/theme.css",
-			"./src/css/compiled-sass/admin.css"
-		], { sourcemaps: true })
-		.pipe(
-			cleanCSS({
-				compatibility: "*",
-			})
-		)
-		.pipe(rename({ suffix: ".min" }))
-		.pipe(gulp.dest('./dist/css', { sourcemaps: '.' }))
-});
-
 
 /**
  * Front-end Javascript compilation. Scripts enqueued in the front-end of the site.
