@@ -55,7 +55,6 @@ node_modules/*
 .sass-cache
 bower_components
 node_modules
-dist
 dist-product
 npm-debug.log
 /vendor/

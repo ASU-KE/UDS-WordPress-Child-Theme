@@ -1,14 +1,14 @@
 /*
 Theme Name: UDS WordPress Child Template
-Theme URI: [Insert your URL here]
-Author: ASU Engineering
+Theme URI: https://github.com/ASU-KE/UDS-WordPress-Child-Theme
+Author: ASU Engineering, ASU KE
 Author URI: https://github.com/asuengineering
 Description: Child theme template for UDS WordPress
-Version: 1.1.0
+Version: 2.0.0
 
 Template: UDS-WordPress-Theme
 
-GitHub Theme URI: ASU-KE/[update-your-repo-url]
+GitHub Theme URI: ASU-KE/UDS-WordPress-Child-Theme
 Primary Branch: main
 
 License: GNU GPL version 2
@@ -18,6 +18,4 @@ Text Domain: uds-wordpress-theme-child
 
 /*
 Just like the parent theme, this file is only used to identify the theme in WordPress.
-- This theme's compiled CSS runs as a dependancy to the parent theme's compiled CSS. 
-- The SASS source files for this child theme come configured to consume the UDS Bootstrap 4 variables from the parent.
 */
