@@ -1,12 +1,8 @@
 <p align="center">
-  <img src="https://cdn.infonet.research.asu.edu/assets/asu_asu_knowledge_enterprise_horiz_150ppi.png" alt="ASU Knowledge Enterprise" width="400" />
+  <img src="https://rto.asu.edu/wp-content/themes/UDS-WordPress-Theme/dist/img/endorsed-logo/asu_knowledge_enterprise_white.png" alt="ASU Knowledge Enterprise" width="400" />
 </p>
-
 <h1 align="center">Unity Design System - WordPress Child Theme Template</h1>
-
 <p align="center">A child theme for <a href="https://github.com/ASU-KE/UDS-WordPress-Theme">UDS-WordPress</a></p>
-
-![divider](https://cdn.infonet.research.asu.edu/assets/divider.png)
 
 ## Version History
 
@@ -17,8 +13,6 @@
   - remove features that belong in custom plugins
 - 1.1.0 - Resolved error with euqueue process of included (blank) JS file. 
 - 1.0.0 - Initial commit.
-
-<hr style="margin:50px 0;"> 
 
 ## Developing With NPM, Gulp, SASS and Browser Sync
 
